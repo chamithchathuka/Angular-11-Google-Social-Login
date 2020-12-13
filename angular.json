@@ -61,7 +61,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "google-sso:build"
+            "browserTarget": "google-sso:build",
+            "sslKey": "./server.key",
+            "sslCert": "./server.crt",
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {
@@ -120,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "google-sso"
+  "defaultProject": "google-sso",
+  "cli": {
+    "analytics": false
+  }
 }
